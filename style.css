@@ -1,0 +1,169 @@
+/*Global styles*/
+body{
+  font-family: "Titillium Web", serif;
+}
+*{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.profile-card{
+  position: relative;
+  /*margin: 0 auto;*/
+  border: 1px solid gray;
+  width: 320px;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.profile-card:hover{
+  border: 1px solid blue;
+  box-shadow: 0 0 10px 1px;
+}
+
+/*position of header content*/
+.card-header{
+  width: 320px;
+  padding:10px 0 100px 0;
+  margin: 0 auto;
+  text-align: center;
+  background: #2196F3;
+  color: #fff;
+}
+.card-header:hover{
+  background: #0960a5;
+}
+
+/*profile info*/
+.card-info{
+  padding: 1em;
+  margin: 50px 5px 0 5px;
+}
+/*Image position*/
+.image1{
+  position:absolute;
+  top:234px;
+  margin-left: 5.35rem;
+  margin-right: 5.35rem;
+  width: 150px;
+  height: 150px;
+  border-radius:50%;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.image1:hover{
+  border-radius: 10%;
+}
+/*card footer*/
+.card-footer{
+  border-top: 1px solid gray;
+  width: 310px;
+  margin: 0 auto;
+}
+.card-footer ul li{
+  display: inline-block;
+}
+.card-footer ul li:first-child{
+  margin-right: 116px;
+}
+.bottom h2{
+  text-align: center;
+  margin-bottom: 0;
+}
+/*========================================================
+END OF NORMAL CSS STYLES FOR PROFILE CARD
+=========================================================*/
+/*========================================================
+START OF PROFILE CARD FLEXBOX VERSION
+=========================================================*/
+.profile-card2{
+  width:320px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  border: 1px solid gray;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.profile-card2:hover{
+  border: 1px solid blue;
+  box-shadow: 0 0 10px 1px;
+}
+.card-header2{
+  align-self: center;
+  text-align: center;
+  background: #2196F3;
+  color: #FAFAFA;
+  padding: 0 4.1em 6em 4.1em;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.card-header2:hover{
+  background: #0960a5;
+}
+.image2{
+  margin-top: -90px;
+  height: 150px;
+  width: 150px;
+  align-self: center;
+  border-radius: 50%;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.image2:hover{
+  border-radius: 10%;
+}
+.card-info2{
+  padding: 1em;
+}
+.bottom2 h2{
+  text-align:center;
+}
+.card-footer2{
+  width: 310px;
+  border-top: 1px solid gray;
+  align-self: center;
+}
+.card-footer2 ul{
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start;;
+}
+.card-footer2 ul li:last-child{
+  margin-left: 85px;
+}
+
+/*COMPARE CSS VS FLEXBOX*/
+.compare{
+  display:-webkit-box;
+  display:flex;
+  justify-content: space-around;
+}
+
+/*Align cards so normal css an flexbox display above cards*/
+.profile-card, .profile-card2{
+  margin-top: 100px;
+}
+.version1, .version2{
+  position:relative;
+  left:320px;
+  color: #BDBDBD;
+}
+/*Misc hover animations for titles*/
+.version1:hover, .version2:hover{
+  -webkit-animation: change 2s infinite;
+          animation: change 2s infinite;
+  max-height:100px;
+}
+
+@-webkit-keyframes change{
+  0%{color:#BDBDBD;}
+  100%{color:#37474F;}
+}
+
+@keyframes change{
+  0%{color:#BDBDBD;}
+  100%{color:#37474F;}
+}
